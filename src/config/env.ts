@@ -5,6 +5,7 @@ const env: EnvConfig = {
   NODE_ENV:
     (process.env.NODE_ENV as "development" | "production" | "test") ||
     "development",
+  JWT_SECRET: process.env.JWT_SECRET || "B1gJwT!$aùs",
 };
 
 export default env;
