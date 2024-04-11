@@ -14,7 +14,7 @@ export class MovieRepository {
 
   /**
    * Récupère la liste de tous les films du fichier movies.json
-   * @returns {Movie[]}
+   * @returns {Movie[]} - Un tableau de tous les films
    */
   public getAllMovies(): Movie[] {
     const data = fs.readFileSync(this.filePath, "utf-8");
@@ -29,8 +29,9 @@ export class MovieRepository {
 
   /**
    * Récupère un film par son id
-   * @param id
-   * @returns {Movie}
+   * @param id - L'identifiant du film à récupèrer
+   * @returns {Movie} - Le film correspondant à l'identifiant fourni
+   * @throws {Error} - Erreur si aucun film avec l'identifiant fourni n'est trouvé
    */
   public getMovieById(id: string): Movie {
     const movie = this.movies.find((movie) => movie.id === id);
