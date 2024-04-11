@@ -12,6 +12,11 @@ const { NODE_ENV } = env;
 const userRepo = new UserRepository();
 const authService = new AuthService();
 
+/**
+ * Connexion 'un utilisateur
+ * @param req
+ * @param res
+ */
 export const login = async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
@@ -44,6 +49,12 @@ export const login = async (req: Request, res: Response) => {
   }
 };
 
+/**
+ * Enregistre un nouvel utilisateur
+ * @param req
+ * @param res
+ * @returns
+ */
 export const register = async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;

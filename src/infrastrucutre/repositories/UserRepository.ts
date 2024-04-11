@@ -8,6 +8,7 @@ export class UserRepository {
 
   /**
    * Récupère tous les utilisateurs
+   * @returns {User[]} - Un tableau contenant tous les utilisateurs
    */
   getAllUsers(): User[] {
     const data = fs.readFileSync(this.filePath, "utf-8");
@@ -16,7 +17,8 @@ export class UserRepository {
 
   /**
    * Récupère un utilisateur en fonction de son username
-   * @param username
+   * @param username - Nom d'utilisateur
+   * @returns {User | undefined} - L'utilisateur correspondant à l'id fourni
    */
   getUserByUsername(username: string) {
     const users = this.getAllUsers();
@@ -25,7 +27,8 @@ export class UserRepository {
 
   /**
    * Création d'un nouvel utilisateur
-   * @param user
+   * @param user - L'utilisateur à ajouter
+   * @returns {void} - Ne retourne rien
    */
   createUser(user: User) {
     const users = this.getAllUsers();

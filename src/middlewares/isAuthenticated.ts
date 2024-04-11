@@ -6,6 +6,12 @@ import jwt from "jsonwebtoken";
 
 const { JWT_SECRET } = env;
 
+/**
+ * Middleware d'authentification
+ * @param req
+ * @param res
+ * @param next
+ */
 export const isAuthenticated = (
   req: Request,
   res: Response,

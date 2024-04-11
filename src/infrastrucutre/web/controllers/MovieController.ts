@@ -4,6 +4,11 @@ import { response } from "../../../utils/response";
 
 const movieService = new MovieService();
 
+/**
+ * Récupère la liste de tous les films
+ * @param req
+ * @param res
+ */
 export const getAllMovies = (req: Request, res: Response) => {
   const movies = movieService.getAllMovies();
   console.table(movies);
@@ -14,6 +19,11 @@ export const getAllMovies = (req: Request, res: Response) => {
   });
 };
 
+/**
+ * Récupère un film par son id
+ * @param req
+ * @param res
+ */
 export const getMovieById = (req: Request, res: Response) => {
   const movieId = req.params.id;
   const movie = movieService.getMovieById(movieId);

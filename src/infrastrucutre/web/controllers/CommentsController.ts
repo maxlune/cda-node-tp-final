@@ -5,7 +5,7 @@ import { response } from "../../../utils/response";
 const commentRepository = new CommentRepository();
 
 /**
- * afficher les commentaires d'un film filtré par son id
+ * Afficher les commentaires d'un film filtré par son id
  * @param req
  * @param res
  */
