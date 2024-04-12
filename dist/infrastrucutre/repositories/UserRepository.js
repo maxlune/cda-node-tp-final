@@ -13,6 +13,7 @@ class UserRepository {
     }
     /**
      * Récupère tous les utilisateurs
+     * @returns {User[]} - Un tableau contenant tous les utilisateurs
      */
     getAllUsers() {
         const data = fs_1.default.readFileSync(this.filePath, "utf-8");
@@ -20,7 +21,8 @@ class UserRepository {
     }
     /**
      * Récupère un utilisateur en fonction de son username
-     * @param username
+     * @param username - Nom d'utilisateur
+     * @returns {User | undefined} - L'utilisateur correspondant à l'id fourni
      */
     getUserByUsername(username) {
         const users = this.getAllUsers();
@@ -28,7 +30,8 @@ class UserRepository {
     }
     /**
      * Création d'un nouvel utilisateur
-     * @param user
+     * @param user - L'utilisateur à ajouter
+     * @returns {void} - Ne retourne rien
      */
     createUser(user) {
         const users = this.getAllUsers();

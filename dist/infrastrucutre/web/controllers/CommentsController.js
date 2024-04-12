@@ -5,7 +5,7 @@ const CommentRepository_1 = require("../../repositories/CommentRepository");
 const response_1 = require("../../../utils/response");
 const commentRepository = new CommentRepository_1.CommentRepository();
 /**
- * afficher les commentaires d'un film filtré par son id
+ * Afficher les commentaires d'un film filtré par son id
  * @param req
  * @param res
  */

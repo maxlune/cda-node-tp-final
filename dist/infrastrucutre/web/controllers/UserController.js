@@ -21,6 +21,11 @@ const AuthService_1 = require("../../../domain/services/AuthService");
 const { NODE_ENV } = env_1.default;
 const userRepo = new UserRepository_1.UserRepository();
 const authService = new AuthService_1.AuthService();
+/**
+ * Connexion 'un utilisateur
+ * @param req
+ * @param res
+ */
 const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { username, password } = req.body;
@@ -49,6 +54,12 @@ const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.login = login;
+/**
+ * Enregistre un nouvel utilisateur
+ * @param req
+ * @param res
+ * @returns
+ */
 const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { username, password } = req.body;

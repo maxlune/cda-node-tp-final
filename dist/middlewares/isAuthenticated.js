@@ -8,6 +8,12 @@ const response_1 = require("../utils/response");
 const env_1 = __importDefault(require("../config/env"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const { JWT_SECRET } = env_1.default;
+/**
+ * Middleware d'authentification
+ * @param req
+ * @param res
+ * @param next
+ */
 const isAuthenticated = (req, res, next) => {
     const { accessToken } = req.cookies;
     if (!accessToken)

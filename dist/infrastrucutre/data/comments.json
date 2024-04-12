@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "movieId": "1",
+        "content": "Bon film !"
+    },
+    {
+        "id": "2",
+        "movieId": "1",
+        "content": "Top !"
+    },
+    {
+        "id": "3",
+        "movieId": "2",
+        "content": "10/10 !"
+    }
+]
